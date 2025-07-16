@@ -2,7 +2,7 @@
 # Module: COM4018 - Introduction to Programming
 # ---------------------------------------------------
 
-# Global data structure for property details (hardcoded from Table 1)
+# Global data structure for property details hardcoded from Table 1
 property_details = {
     "B12-3AB": {"original_cost": 153450, "mortgage": 112345},
     "B13-4CD": {"original_cost": 212130, "mortgage": 180234},
@@ -24,7 +24,7 @@ property_transactions = {
 def property_data():
     print("\n--- Enter Property Rental or Repair Details ---")
     while True:
-        # Step 1: Input Property ID
+        # InputPropertyID
         property_id = input("Enter property ID (or press Enter to return to menu): ").strip().upper()
         if property_id == "":
             print("Returning to main menu.")
@@ -34,30 +34,30 @@ def property_data():
             print("Invalid property ID. Please try again.")
             continue
 
-        # Step 2: Input description
+        #Inputdescription
         description = input("Enter description (e.g., Rent received or Boiler repair): ")
 
-        # Step 3: Input amount with validation
+        #Inputamount with validation
         try:
             amount = float(input("Enter amount (positive for rent, negative for expense): "))
         except ValueError:
             print("Invalid amount. Please enter a numeric value.")
             continue
 
-        # Step 4: Save the transaction
+        #Save
         property_transactions[property_id].append((description, amount))
         print(f"Entry saved for {property_id}.")
 
-        # Step 5: Ask to continue
+        #continue
         another = input("Add another transaction? (y/n): ").strip().lower()
         if another != 'y':
             break
 
-# Entry point for testing in VS Code
+# Entrypoint
 if __name__ == "__main__":
     property_data()
 
-    # Optional: Print all entries to verify data storage
+    #Print all entries to verify data storage
     print("\n--- Stored Transactions Summary ---")
     for prop, entries in property_transactions.items():
         if entries:

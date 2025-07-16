@@ -2,12 +2,12 @@
 # Module: COM4018 - Introduction to Programming
 # ----------------------------------------------
 
-# Function to handle Option 1: Enter property details
+#propertydetails
 def property_data():
     print("\n--- Enter Property Details ---")
     print("This is a placeholder for entering property rental and repair data.")
 
-# Function to handle Option 2: Display summary
+# Displaysummary
 def summary_data():
     print("\n--- Property Summary ---")
     print("This is a placeholder for displaying property summary.")
